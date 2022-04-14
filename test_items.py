@@ -15,4 +15,4 @@ def test_browser_languages(browser):
         # Проверяем наличие кнопки добавления в корзину (что количество элементов, найденных по данному селектору больше нуля)
         assert len(browser.find_elements(By.CSS_SELECTOR, ".btn-add-to-basket")) > 0, "\"Add to basket\" button does not exists"
     except Exception:
-        raise ValueError("Не удалось загрузить страницу.")
+        raise ValueError("Не удалось загрузить страницу или найти элемент.")
